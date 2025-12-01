@@ -7,7 +7,8 @@ module.exports = {
 	devServer: {
 		historyApiFallback: true,
 		static: path.resolve(__dirname, './dist'),
-		host: '3d-shop',
+		// Локальный хост для дев-режима; продакшен-домен остаётся только в proxy target
+		host: 'localhost',
 		port: 3000,
 		allowedHosts: 'all',
 		open: true,
@@ -24,7 +25,7 @@ module.exports = {
 				proxyTimeout: 60000,
 				logLevel: 'debug',
 				// Настройка cookie для работы через прокси
-				cookieDomainRewrite: '3d-shop',
+				cookieDomainRewrite: 'treed.pro',
 				cookiePathRewrite: '/',
 				onProxyReq: (proxyReq, req, res) => {
 					console.log('[PROXY] ===========================================');
@@ -127,7 +128,7 @@ module.exports = {
 				proxyTimeout: 60000,
 				logLevel: 'debug',
 				// Настройка cookie для работы через прокси
-				cookieDomainRewrite: '3d-shop',
+				cookieDomainRewrite: 'treed.pro',
 				cookiePathRewrite: '/',
 				onProxyReq: (proxyReq, req, res) => {
 					console.log('[PROXY API] ===========================================');
