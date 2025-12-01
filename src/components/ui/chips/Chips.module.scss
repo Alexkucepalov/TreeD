@@ -1,0 +1,97 @@
+.chips,
+.chips * {
+  box-sizing: border-box;
+}
+
+.chips {
+  border-radius: 30px;
+  padding: 6px 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.chips--large {
+  height: 24px;
+  min-width: 85px;
+}
+
+.chips--small {
+  height: 16px;
+  min-width: 58px;
+  padding: 4px 8px;
+}
+
+.chipsText {
+  text-align: center;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  white-space: nowrap;
+}
+
+.chips--small .chipsText {
+  font-size: 13px;
+}
+
+.chips--purple {
+  background: rgba(145, 99, 255, 0.2);
+  
+  .chipsText {
+    color: #5b3cc4;
+  }
+}
+
+.chips--blue {
+  background: rgba(41, 136, 199, 0.2);
+  
+  .chipsText {
+    color: #2988c7;
+  }
+}
+
+.chips--yellow {
+  background: rgba(255, 236, 160, 0.5);
+  
+  .chipsText {
+    color: #deb100;
+  }
+}
+
+.chips--green {
+  background: #cbffce;
+  
+  .chipsText {
+    color: #4dca53;
+  }
+}
+
+.chips--light-yellow {
+  background: #ffcfaa;
+  
+  .chipsText {
+    color: #ff7733;
+  }
+}
+
+.chips--peach {
+  background: #ffcfaa;
+  
+  .chipsText {
+    color: #ff7733;
+  }
+}
+
+.chips--gray {
+  background: rgba(160, 156, 176, 0.2);
+  
+  .chipsText {
+    color: #a09cb0;
+  }
+}
+
+

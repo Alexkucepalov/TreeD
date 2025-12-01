@@ -1,0 +1,91 @@
+.button,
+.button * {
+  box-sizing: border-box;
+}
+
+.button {
+  background: var(--fioletovyj, #9163ff);
+  border-radius: 30px;
+  padding: 10px 35px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover:not([aria-disabled='true']) {
+    opacity: 0.9;
+  }
+
+  &:active:not([aria-disabled='true']) {
+    transform: scale(0.98);
+  }
+}
+
+.div {
+  color: var(--belyj, #ffffff);
+  text-align: center;
+  font-family: var(--botton-font-family, "Montserrat-Medium", sans-serif);
+  font-size: var(--botton-font-size, 18px);
+  font-weight: var(--botton-font-weight, 500);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button--primary {
+  background: var(--fioletovyj, #9163ff);
+
+  .div {
+    color: var(--belyj, #ffffff);
+  }
+}
+
+.button--secondary {
+  background: var(--belyj, #ffffff);
+  box-shadow: var(
+    --ten-knopki-fioletovyj-box-shadow,
+    0px 0px 11.3px 0px rgba(145, 99, 255, 0.2)
+  );
+
+  .div {
+    color: var(--fioletovyj, #9163ff);
+  }
+}
+
+.button--ghost {
+  background: var(--belyj, #ffffff);
+  box-shadow: var(
+    --ten-knopki-box-shadow,
+    0px 0px 11.3px 0px rgba(115, 115, 115, 0.21)
+  );
+
+  .div {
+    color: #000000;
+  }
+}
+
+.button--disabled {
+  background: var(--belyj, #ffffff);
+  box-shadow: var(
+    --ten-knopki-box-shadow,
+    0px 0px 11.3px 0px rgba(115, 115, 115, 0.21)
+  );
+  opacity: 1;
+  cursor: default;
+  pointer-events: none;
+
+  .div {
+    color: var(--seryj, #c4c4c4);
+  }
+}
+
+.button--block {
+  width: 100%;
+}

@@ -1,0 +1,62 @@
+.page {
+  padding: 48px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.subtitle {
+  margin: 0;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.componentGroup {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+

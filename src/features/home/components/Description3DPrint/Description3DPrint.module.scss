@@ -1,0 +1,127 @@
+.container {
+  width: 100%;
+  background-color: #fff;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @media (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 64px;
+    padding: 0 32px;
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    width: 900px;
+    height: 900px;
+  }
+}
+
+.image {
+  width: 400px;
+  height: 400px;
+
+  @media (min-width: 768px) {
+    width: 800px;
+    height: 800px;
+  }
+}
+
+.textContainer {
+  max-width: 100%;
+  text-align: left;
+
+  @media (min-width: 768px) {
+    max-width: 600px;
+  }
+}
+
+.titleBlock {
+  width: 680px;
+  height: 184px;
+  margin-bottom: 0;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.title {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 0;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: left;
+  margin-top: 0;
+}
+
+.titleAccent {
+  color: #9163FF;
+}
+
+.titleSecondary {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 0;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: left;
+  color: #1E1E1E;
+  margin-top: 0;
+}
+
+.description {
+  color: #000000;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  margin-top: 25px;
+}
+
+.link {
+  color: #9163FF;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-decoration: underline;
+  text-decoration-color: #9163FF;
+  text-underline-offset: 4px;
+  transition: color 0.2s;
+  display: inline-block;
+  margin-top: 25px;
+
+  &:hover {
+    color: #7B4FE8;
+    text-decoration-color: #7B4FE8;
+  }
+}
+
+

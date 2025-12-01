@@ -1,0 +1,83 @@
+/* Глобальные стили для исправления автозаполнения */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: #333 !important;
+  background-color: white !important;
+  color: #333 !important;
+  background-clip: content-box !important;
+  -webkit-background-clip: content-box !important;
+}
+
+/* Material-UI поля ввода */
+.MuiOutlinedInput-root input:-webkit-autofill,
+.MuiOutlinedInput-root input:-webkit-autofill:hover,
+.MuiOutlinedInput-root input:-webkit-autofill:focus,
+.MuiOutlinedInput-root input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: #333 !important;
+  background-color: white !important;
+  color: #333 !important;
+  background-clip: content-box !important;
+  -webkit-background-clip: content-box !important;
+}
+
+/* Дополнительные правила для всех полей ввода */
+.MuiTextField-root input:-webkit-autofill,
+.MuiTextField-root input:-webkit-autofill:hover,
+.MuiTextField-root input:-webkit-autofill:focus,
+.MuiTextField-root input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: #333 !important;
+  background-color: white !important;
+  color: #333 !important;
+  background-clip: content-box !important;
+  -webkit-background-clip: content-box !important;
+}
+
+/* Убираем синие полоски автозаполнения */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: #333 !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  background-clip: content-box !important;
+  -webkit-background-clip: content-box !important;
+}
+
+.MuiOutlinedInput-root input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: #333 !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  background-clip: content-box !important;
+  -webkit-background-clip: content-box !important;
+}
+
+/* Специальные правила для полей с темным фоном */
+.MuiOutlinedInput-root.Mui-focused input:-webkit-autofill,
+.MuiOutlinedInput-root.Mui-focused input:-webkit-autofill:hover,
+.MuiOutlinedInput-root.Mui-focused input:-webkit-autofill:focus,
+.MuiOutlinedInput-root.Mui-focused input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: #333 !important;
+  background-color: white !important;
+  color: #333 !important;
+  background-clip: content-box !important;
+  -webkit-background-clip: content-box !important;
+}
+
+/* Правила для полей с ошибками */
+.MuiOutlinedInput-root.Mui-error input:-webkit-autofill,
+.MuiOutlinedInput-root.Mui-error input:-webkit-autofill:hover,
+.MuiOutlinedInput-root.Mui-error input:-webkit-autofill:focus,
+.MuiOutlinedInput-root.Mui-error input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: #333 !important;
+  background-color: white !important;
+  color: #333 !important;
+  background-clip: content-box !important;
+  -webkit-background-clip: content-box !important;
+}

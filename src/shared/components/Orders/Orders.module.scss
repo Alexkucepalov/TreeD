@@ -1,0 +1,540 @@
+// Grid view styles
+.ordersContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  margin: 0 15%;
+  width: calc(100% - 30%);
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.viewModeSwitcher {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.ordersTitle {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 32px;
+  line-height: 110%;
+  font-weight: 700;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.viewModeButtonActive {
+  background: #ffffff;
+  border-radius: 7px;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  box-shadow: 0px 0px 11.3px 0px rgba(115, 115, 115, 0.21);
+  overflow: hidden;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #f5f5f5;
+  }
+}
+
+.grid {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  overflow: visible;
+  aspect-ratio: 1;
+}
+
+.viewModeButtonInactive {
+  background: #c4c4c4;
+  border-radius: 7px;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #b0b0b0;
+  }
+}
+
+// Card view button styles
+.cardViewHeader .viewModeButtonActive {
+  background: #c4c4c4;
+  box-shadow: none;
+}
+
+.cardViewHeader .viewModeButtonInactive {
+  background: #ffffff;
+  box-shadow: 0px 0px 11.3px 0px rgba(115, 115, 115, 0.21);
+}
+
+.menu {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  overflow: visible;
+  aspect-ratio: 1;
+}
+
+.ordersTableContainer {
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  min-height: 195px;
+  position: relative;
+  box-shadow: 0px 0px 11.3px 0px rgba(115, 115, 115, 0.21);
+  overflow: hidden;
+}
+
+.dataGridWrapper {
+  width: 100%;
+  height: 400px;
+  
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border-radius: 10px;
+    
+    &:hover {
+      background: #a0a0a0;
+    }
+  }
+}
+
+.filters {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filterSelect {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    border-color: #9163ff;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #9163ff;
+    box-shadow: 0px 0px 11.3px 0px rgba(145, 99, 255, 0.21);
+  }
+}
+
+.clearFilters {
+  background: #c4c4c4;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #a0a0a0;
+  }
+}
+
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #727986;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.resultsCount {
+  color: #727986;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 16px;
+  margin-left: auto;
+}
+
+.tableCustomerCell {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.avatarImg {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.tableCustomerName {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.tableTypeCell {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.tableStatusCell {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+// Card view styles
+.cardViewHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.cardViewHeaderTop {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.cardViewHeaderBottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.button {
+  background: #9163ff;
+  border-radius: 30px;
+  padding: 10px 35px 10px 35px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #5B4C9D;
+  }
+}
+
+.buttonText {
+  color: #c4c4c4;
+  text-align: center;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.cardList {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  width: 100%;
+  padding: 10px 0;
+
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border-radius: 10px;
+    
+    &:hover {
+      background: #a0a0a0;
+    }
+  }
+}
+
+.orderCard {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  width: 425px;
+  min-width: 425px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+  }
+}
+
+.orderCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.orderHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.orderTypeContainer {
+  display: flex;
+  align-items: center;
+}
+
+.orderDateContainer {
+  display: flex;
+  align-items: center;
+}
+
+.dateText {
+  color: #727986;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.orderCustomerSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  height: 118px;
+  min-height: 118px;
+}
+
+.orderTitleCard {
+  color: #000000;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 20px;
+  line-height: 100%;
+  font-weight: 700;
+  width: 100%;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.orderCustomerInfo {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.customerName {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  flex: 1;
+  min-width: 0;
+  word-wrap: break-word;
+}
+
+.orderDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-top: 0;
+  border-top: none;
+}
+
+.orderDetailsRow {
+  display: flex;
+  flex-direction: row;
+  gap: 17px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.budgetSection {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+  padding-top: 0;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 16px;
+}
+
+.budgetLabel {
+  display: flex;
+  align-items: center;
+}
+
+.detailLabel {
+  color: #6b7280;
+  text-align: left;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.budgetValue {
+  display: flex;
+  align-items: center;
+}
+
+.budgetText {
+  color: #000000;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.statusSection {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+  padding-top: 0;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 16px;
+  min-height: 50px;
+}
+
+.statusLabel {
+  display: flex;
+  align-items: flex-start;
+}
+
+.statusValue {
+  display: flex;
+  align-items: flex-start;
+  overflow: visible;
+}
+
+.statusTags {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media (max-width: 1400px) {
+  .ordersContainer {
+    margin: 0 10%;
+    width: calc(100% - 20%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .ordersContainer {
+    margin: 0 5%;
+    width: calc(100% - 10%);
+  }
+
+  .orderCard {
+    width: 350px;
+    min-width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ordersContainer {
+    margin: 0 5%;
+    width: calc(100% - 10%);
+    padding: 15px 0;
+  }
+
+  .orderCard {
+    width: 350px;
+    min-width: 350px;
+  }
+
+  .cardList {
+    flex-wrap: nowrap;
+  }
+}

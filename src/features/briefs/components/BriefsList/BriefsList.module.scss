@@ -1,0 +1,441 @@
+.briefsListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  flex: 1;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.title {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 36px;
+  line-height: 95%;
+  font-weight: 700;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sortSelect {
+  border-radius: 30px;
+  border: 1px solid #c4c4c4;
+  padding: 5px 20px 5px 25px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  height: 31px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.sortContent {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.sortText {
+  color: #c4c4c4;
+  text-align: center;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+}
+
+.chevronDown {
+  flex-shrink: 0;
+  width: 31px;
+  height: 31px;
+  position: relative;
+  overflow: visible;
+}
+
+.briefsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: stretch;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  width: 100%;
+}
+
+.briefCard {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  min-height: 200px;
+  position: relative;
+  box-shadow: 0px 0px 11.3px 0px rgba(115, 115, 115, 0.21);
+  overflow: hidden;
+}
+
+.briefCardWithImage {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  min-height: 200px;
+  position: relative;
+  box-shadow: 0px 0px 11.3px 0px rgba(115, 115, 115, 0.21);
+  overflow: hidden;
+}
+
+.briefImage {
+  border-radius: 10px;
+  align-self: stretch;
+  flex: 0 0 auto;
+  position: relative;
+  object-fit: cover;
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+  height: 100%;
+}
+
+.briefContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  min-width: 0;
+}
+
+.briefTopSection {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.briefTags {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.briefPriceDeadline {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 103px;
+  position: relative;
+}
+
+.price {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 24px;
+  line-height: 100%;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.deadline {
+  flex-shrink: 0;
+  width: 80.84px;
+  height: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.deadlineText {
+  color: #c4c4c4;
+  text-align: left;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+}
+
+.clockIcon {
+  width: 17px;
+  height: 17px;
+  position: relative;
+  overflow: visible;
+  aspect-ratio: 1;
+  color: #c4c4c4;
+  flex-shrink: 0;
+}
+
+.briefDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 100%;
+  position: relative;
+  margin-top: auto;
+}
+
+.briefText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 100%;
+  position: relative;
+}
+
+.briefTitle {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 24px;
+  line-height: 100%;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.briefDescription {
+  color: #727986;
+  text-align: left;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+  height: 32px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.briefFooter {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 32px;
+  position: relative;
+}
+
+.providerInfo {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.avatarContainer {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.avatarImage {
+  border-radius: 25px;
+  flex-shrink: 0;
+  width: 53.76px;
+  height: 34.3px;
+  position: relative;
+  object-fit: cover;
+  aspect-ratio: 53.76/34.3;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.avatarInitial {
+  background: #222222;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.onlineIndicator {
+  background: #4dca53;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  left: 21.33px;
+  top: 21.14px;
+  aspect-ratio: 1;
+}
+
+.providerDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 142px;
+  position: relative;
+}
+
+.providerName {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.providerRating {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.starIcon {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  position: relative;
+  overflow: visible;
+  aspect-ratio: 1;
+  color: #ffd700;
+}
+
+.ratingText {
+  text-align: left;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ratingValue {
+  color: #727986;
+}
+
+.reviewsCount {
+  color: #c4c4c4;
+}
+
+.applyButton {
+  background: #9163ff;
+  border-radius: 30px;
+  padding: 10px 20px 12px 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  height: 31px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #5B4C9D;
+  }
+}
+
+.applyButtonText {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

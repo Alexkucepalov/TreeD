@@ -1,0 +1,599 @@
+.profileContentContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  padding: 20px 0;
+  margin: 0 15%;
+  box-sizing: border-box;
+  width: calc(100% - 30%);
+}
+
+.profileCard {
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 20px 20px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 504px;
+  min-width: 400px;
+  height: 392px;
+  position: relative;
+  box-shadow: 0px 0px 11.3px 0px rgba(115, 115, 115, 0.21);
+}
+
+.profileCardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+}
+
+.userInfoRow {
+  display: flex;
+  flex-direction: row;
+  gap: 13px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 116px;
+  height: 116px;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.avatarBackground {
+  background: #222222;
+  border-radius: 85px;
+  padding: 29px 37px 29px 37px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.avatarInitial {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 32px;
+  line-height: 120%;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarBorder {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #ff7733;
+  border-width: 4px;
+  width: 110px;
+  height: 110.44px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
+
+.avatarStatusIndicator {
+  background: #4dca53;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 83.1px;
+  top: 86.59px;
+  aspect-ratio: 1;
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+
+.userName {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 36px;
+  line-height: 95%;
+  font-weight: 700;
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.userTags {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.status {
+  background: rgba(145, 99, 255, 0.2);
+  border-radius: 30px;
+  padding: 6px 10px 6px 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 24px;
+  position: relative;
+}
+
+.maker {
+  color: #5b3cc4;
+  text-align: center;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+}
+
+.chips {
+  background: #cdcdcd;
+  border-radius: 30px;
+  padding: 3px 12px 3px 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.chips2 {
+  color: #787878;
+  text-align: center;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+}
+
+.ratingContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.star {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  overflow: visible;
+  aspect-ratio: 1;
+}
+
+.ratingText {
+  text-align: left;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ratingValue {
+  color: #727986;
+}
+
+.ratingCount {
+  color: #c4c4c4;
+}
+
+.technologiesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.sectionTitle {
+  color: #727986;
+  text-align: left;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+
+.technologiesList {
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.chips3 {
+  background: #d3c7ff;
+  border-radius: 30px;
+  padding: 3px 12px 3px 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.chips4 {
+  color: #5b3cc4;
+  text-align: center;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+}
+
+.descriptionSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.descriptionText {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+  height: 79px;
+  line-height: 1.5;
+}
+
+.analyticsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 0;
+  position: relative;
+}
+
+.analyticsSectionHeader {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.analyticsTitle {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 32px;
+  line-height: 110%;
+  font-weight: 700;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.analyticsCards {
+  display: flex;
+  flex-direction: row;
+  gap: 22px;
+  row-gap: 19px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-self: stretch;
+  flex: 1;
+  min-width: 0;
+  position: relative;
+}
+
+.analyticsCard {
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 18px 20px 18px 20px;
+  flex: 1;
+  min-width: 300px;
+  display: grid;
+  gap: 65px;
+  position: relative;
+  box-shadow: 0px 0px 11.3px 0px rgba(115, 115, 115, 0.21);
+  overflow: hidden;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.analyticsCardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 164px;
+  position: relative;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
+}
+
+.analyticsCardHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.analyticsCardTitle {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+  align-self: stretch;
+}
+
+.analyticsCardSubtitle {
+  color: #727986;
+  text-align: left;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+
+.numberValue {
+  color: #000000;
+  text-align: right;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 96px;
+  line-height: 95%;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.subscriptionPromo {
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 20px 22px 27px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 100%;
+  min-height: 124px;
+  position: relative;
+  box-shadow: 0px 0px 11.3px 0px rgba(115, 115, 115, 0.21);
+}
+
+.subscriptionPromoContent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+}
+
+.subscriptionPromoText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-self: stretch;
+  flex-shrink: 0;
+  width: 434px;
+  position: relative;
+}
+
+.promoTitle {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 24px;
+  line-height: 100%;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+}
+
+.promoDescription {
+  text-align: left;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  position: relative;
+}
+
+.promoDescriptionText {
+  color: #000000;
+}
+
+.promoDescriptionHighlight {
+  color: #9163ff;
+}
+
+.button {
+  background: #9163ff;
+  border-radius: 30px;
+  padding: 10px 35px 10px 35px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #5B4C9D;
+  }
+}
+
+.buttonText {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1400px) {
+  .profileContentContainer {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0 10%;
+    width: calc(100% - 20%);
+  }
+
+  .profileCard {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .analyticsSection {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .subscriptionPromo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .profileContentContainer {
+    margin: 0 5%;
+    width: calc(100% - 10%);
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .profileContentContainer {
+    margin: 0 5%;
+    width: calc(100% - 10%);
+    padding: 15px 0;
+  }
+
+  .profileCard {
+    height: auto;
+    min-height: 392px;
+  }
+
+  .userName {
+    font-size: 28px;
+  }
+
+  .analyticsTitle {
+    font-size: 24px;
+  }
+
+  .numberValue {
+    font-size: 64px;
+  }
+
+  .analyticsCards {
+    flex-direction: column;
+  }
+
+  .analyticsCard {
+    width: 100%;
+  }
+}
+
+

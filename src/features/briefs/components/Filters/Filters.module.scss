@@ -1,0 +1,524 @@
+.filtersContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 250.61px;
+  position: relative;
+  background: #ffffff;
+  padding: 0;
+  margin: 0;
+}
+
+.title {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 24px;
+  line-height: 100%;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.filtersContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  width: 100%;
+}
+
+.categorySelect {
+  width: 100%;
+}
+
+.selectContent {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+}
+
+.selectText {
+  color: #c4c4c4;
+  text-align: center;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  flex: 1;
+}
+
+.chevronDown {
+  flex-shrink: 0;
+  width: 31px;
+  height: 31px;
+  position: relative;
+  overflow: visible;
+}
+
+.ratingButton {
+  border-radius: 30px;
+  border: 1px solid #c4c4c4;
+  padding: 5px 20px 5px 25px;
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 31px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+}
+
+.buttonContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+}
+
+.buttonText {
+  color: #c4c4c4;
+  text-align: center;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  flex: 1;
+}
+
+.filterSection {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  width: 100%;
+}
+
+.sectionTitle {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+
+.chipsContainer {
+  border-radius: 20px;
+  border: 1px solid #c4c4c4;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  min-height: 31px;
+  position: relative;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.chip {
+  background: #ffcfaa;
+  border-radius: 30px;
+  padding: 4px 7px;
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.chipText {
+  color: #ff7733;
+  text-align: center;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  position: relative;
+}
+
+.chipX {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  position: relative;
+  overflow: visible;
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+
+.chipMaterial {
+  background: #ffc7c7;
+  border-radius: 30px;
+  padding: 4px 7px;
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.chipTextMaterial {
+  color: #e03b3b;
+  text-align: center;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  position: relative;
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.radioOption,
+.checkboxOption {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  aspect-ratio: 1;
+}
+
+.radioUnselected {
+  border-radius: 10px;
+  border: 1px solid #c4c4c4;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+
+.radioSelected {
+  border-radius: 10px;
+  border: 1px solid #9163ff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+
+.radioDot {
+  background: #9163ff;
+  border-radius: 50%;
+  width: 56.79%;
+  height: 9.09px;
+  position: absolute;
+  right: 21.6%;
+  left: 21.6%;
+  top: 50%;
+  transform: translate(0, -50%);
+  aspect-ratio: 1;
+}
+
+.radioLabel {
+  color: #c4c4c4;
+  text-align: left;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+}
+
+.radioLabelActive {
+  color: #9163ff;
+  text-align: left;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+}
+
+.checkbox {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+
+.checkboxUnselected {
+  border-radius: 3px;
+  border: 1px solid #c4c4c4;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+
+.checkboxSelected {
+  border-radius: 3px;
+  border: 1px solid #9163ff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+}
+
+.checkboxCheck {
+  background: #9163ff;
+  border-radius: 2px;
+  width: 56.79%;
+  height: 9.09px;
+  position: absolute;
+  right: 21.6%;
+  left: 21.6%;
+  top: 50%;
+  transform: translate(0, -50%);
+  aspect-ratio: 1;
+}
+
+.checkboxLabel {
+  color: #c4c4c4;
+  text-align: left;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+}
+
+.checkboxLabelActive {
+  color: #9163ff;
+  text-align: left;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+}
+
+.rangeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.rangeValues {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.rangeValue {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+}
+
+.rangeValueRight {
+  color: #000000;
+  text-align: right;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+}
+
+.rangeSlider {
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 17px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.slider {
+  width: 100%;
+  height: 17px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  outline: none;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #9163ff;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    margin-top: -4px;
+  }
+
+  &::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    background: #9163ff;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    z-index: 2;
+  }
+
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 1px;
+    background: #9163ff;
+    border-radius: 0;
+  }
+
+  &::-moz-range-track {
+    width: 100%;
+    height: 1px;
+    background: #9163ff;
+    border-radius: 0;
+  }
+
+  &:first-of-type {
+    z-index: 2;
+  }
+
+  &:last-of-type {
+    z-index: 1;
+  }
+}
+
+.applyButton {
+  background: #9163ff;
+  border-radius: 30px;
+  padding: 10px 35px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #5B4C9D;
+  }
+}
+
+.applyButtonText {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

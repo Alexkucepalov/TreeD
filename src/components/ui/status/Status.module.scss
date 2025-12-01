@@ -1,0 +1,51 @@
+.status,
+.status * {
+  box-sizing: border-box;
+}
+
+.status {
+  border-radius: 30px;
+  padding: 6px 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  position: relative;
+}
+
+.statusText {
+  text-align: center;
+  font-family: var(--chips1-font-family, "Montserrat-Medium", sans-serif);
+  font-size: var(--chips1-font-size, 16px);
+  font-weight: var(--chips1-font-weight, 500);
+  position: relative;
+}
+
+.status--free {
+  background: #cbffce;
+  width: 56px;
+
+  .statusText {
+    color: #4dca53;
+  }
+}
+
+.status--maker {
+  background: rgba(145, 99, 255, 0.2);
+  width: 71px;
+
+  .statusText {
+    color: #5b3cc4;
+  }
+}
+
+.status--factory {
+  background: #ffcfaa;
+  width: 81px;
+
+  .statusText {
+    color: #ff7733;
+  }
+}

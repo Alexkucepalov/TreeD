@@ -1,0 +1,246 @@
+.dashboard {
+	display: flex;
+	min-height: 100vh;
+	background: #f5f5f5;
+	padding: 20px;
+	gap: 24px;
+}
+
+.sidebar {
+	width: 350px;
+	flex-shrink: 0;
+}
+
+.profileCard {
+	background: white;
+	border-radius: 20px;
+	padding: 24px;
+	margin-bottom: 24px;
+}
+
+.avatar {
+	position: relative;
+	width: 80px;
+	height: 80px;
+	margin: 0 auto 16px;
+}
+
+.avatarLetter {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background: #9163FF;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 32px;
+	font-weight: 600;
+}
+
+.onlineIndicator {
+	position: absolute;
+	bottom: 2px;
+	right: 2px;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #4caf50;
+	border: 3px solid white;
+}
+
+.userName {
+	margin: 0 0 12px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.tags {
+	display: flex;
+	gap: 8px;
+	justify-content: center;
+	margin-bottom: 12px;
+}
+
+.rating {
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 16px;
+	color: #666;
+}
+
+.technologies {
+	margin-top: 20px;
+}
+
+.technologies h3 {
+	font-size: 14px;
+	margin-bottom: 12px;
+	color: #666;
+}
+
+.techTags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.mainContent {
+	flex: 1;
+	padding: 0 20px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 24px;
+}
+
+.header h1 {
+	font-size: 32px;
+	font-weight: 700;
+	margin: 0;
+}
+
+.headerActions button {
+	padding: 8px 16px;
+	background: #9163FF;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.analytics {
+	display: flex;
+	gap: 24px;
+	margin-bottom: 32px;
+	flex-wrap: wrap;
+}
+
+.subscriptionCard {
+	background: linear-gradient(135deg, #9163FF 0%, #7c4dff 100%);
+	border-radius: 20px;
+	padding: 24px;
+	color: white;
+	flex: 1;
+	min-width: 300px;
+}
+
+.subscriptionCard p {
+	margin: 0 0 12px;
+}
+
+.subscriptionCard button {
+	margin-top: 12px;
+	padding: 10px 20px;
+	background: white;
+	color: #9163FF;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.ordersSection {
+	background: white;
+	border-radius: 20px;
+	padding: 24px;
+}
+
+.ordersHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 24px;
+}
+
+.ordersHeader h2 {
+	font-size: 24px;
+	font-weight: 600;
+	margin: 0;
+}
+
+.viewToggle {
+	display: flex;
+	gap: 8px;
+}
+
+.viewToggle button {
+	padding: 8px 16px;
+	background: transparent;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.viewToggle button.active {
+	background: #9163FF;
+	color: white;
+	border-color: #9163FF;
+}
+
+.ordersList table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.ordersList th,
+.ordersList td {
+	padding: 12px;
+	text-align: left;
+	border-bottom: 1px solid #eee;
+}
+
+.ordersList th {
+	font-weight: 600;
+	color: #666;
+}
+
+.ordersGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 24px;
+}
+
+.orderCard {
+	background: #f9f9f9;
+	border-radius: 16px;
+	padding: 20px;
+	position: relative;
+}
+
+.orderDate {
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	font-size: 12px;
+	color: #666;
+}
+
+.orderCard h3 {
+	margin: 12px 0 8px;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.orderCard p {
+	margin: 0 0 12px;
+	color: #666;
+	font-size: 14px;
+}
+
+.orderBudget {
+	font-size: 18px;
+	font-weight: 600;
+	color: #9163FF;
+	margin-bottom: 12px;
+}
+
+.orderStatus {
+	margin-top: 8px;
+}
+
+

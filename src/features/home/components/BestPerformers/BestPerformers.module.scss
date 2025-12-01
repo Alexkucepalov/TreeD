@@ -1,0 +1,202 @@
+.container {
+  width: 100%;
+  max-width: 1420px;
+  margin: 48px auto 150px;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  color: #232323;
+}
+
+.title {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  color: #000000;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: 45.6px;
+  white-space: nowrap;
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 0;
+}
+
+.description {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 32px;
+  max-width: 1420px;
+  margin-top: 0;
+}
+
+.filterContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+.filterButtons {
+  width: 100%;
+  max-width: 680px;
+  height: 45px;
+  background-color: #fff;
+  border-radius: 44.835px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.filterButton {
+  flex: 1;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+}
+
+.filterButtonActive {
+  background-color: #9163ff;
+  color: #fff;
+  border-radius: 44.835px;
+}
+
+.filterButtonFirst {
+  border-radius: 44.835px 0 0 44.835px;
+}
+
+.filterButtonLast {
+  border-radius: 0 44.835px 44.835px 0;
+}
+
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: stretch;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1.5px solid #EBEBED;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(124, 92, 250, 0.10);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-family: 'Montserrat', Arial, sans-serif;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 38px rgba(124, 92, 250, 0.18);
+  }
+}
+
+.cardImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cardContent {
+  width: 100%;
+  padding: 20px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardType {
+  padding: 5px 10px;
+  border-radius: 999px;
+  background-color: #F3F0FF;
+  color: #754FFF;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.cardRating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ratingValue {
+  font-weight: 700;
+  font-size: 14px;
+  color: #754FFF;
+}
+
+.ratingStar {
+  font-size: 16px;
+  color: #FFD600;
+}
+
+.cardTitle {
+  font-weight: 700;
+  font-size: 18px;
+  color: #232323;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.cardAuthor {
+  font-weight: 400;
+  font-size: 14px;
+  color: #A09CB0;
+  margin-bottom: 4px;
+  margin-top: 0;
+}
+
+.cardDescription {
+  font-weight: 400;
+  font-size: 14px;
+  color: #232323;
+  margin: 0;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+  cursor: pointer;
+}
+
+.footerIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.footerText {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #754FFF;
+}
+

@@ -1,0 +1,83 @@
+.briefsPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 40px 0;
+  box-sizing: border-box;
+  width: calc(100% - 30%);
+  margin: 0 15%;
+  background: #ffffff;
+  position: relative;
+}
+
+.filtersSection {
+  flex-shrink: 0;
+  width: 250.61px;
+  position: sticky;
+  top: 120px;
+  align-self: flex-start;
+  z-index: 10;
+  background: #ffffff;
+  padding: 0;
+  margin: 0;
+  height: fit-content;
+}
+
+
+.briefsSection {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 1400px) {
+  .content {
+    width: calc(100% - 20%);
+    margin: 0 10%;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .content {
+    width: calc(100% - 10%);
+    margin: 0 5%;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    padding: 40px 5%;
+    gap: 30px;
+  }
+
+  .filtersSection {
+    width: 100%;
+    position: relative;
+    top: 0;
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 20px 5%;
+    gap: 20px;
+  }
+}
+
