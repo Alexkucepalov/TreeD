@@ -5,6 +5,7 @@ import { Login, Register, ForgotPassword, ResetPassword, AuthSuccess, Autologin 
 import { ContractorRegister } from '@features/contractor';
 import { Profile } from '@features/profile';
 import { BriefsPage } from '@features/briefs';
+import { CreateOrder } from '@features/orders';
 import ProtectedRouteElement from '@shared/components/ProtectedRoute';
 import styles from './app.module.scss';
 
@@ -69,6 +70,14 @@ const App = () => {
 						element={
 							<ProtectedRouteElement onlyForAuth>
 								<BriefsPage />
+							</ProtectedRouteElement>
+						}
+					/>
+					<Route
+						path='/create-order'
+						element={
+							<ProtectedRouteElement onlyForAuth>
+								<CreateOrder />
 							</ProtectedRouteElement>
 						}
 					/>

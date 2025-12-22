@@ -24,6 +24,10 @@ const ProfileHeader: React.FC = () => {
     navigate('/briefs');
   };
 
+  const handleCreateOrder = () => {
+    navigate('/create-order');
+  };
+
   return (
     <>
       <div className={styles.headerContainer}>
@@ -33,6 +37,9 @@ const ProfileHeader: React.FC = () => {
             <div className={styles.roleSwitcher}>
               <div className={styles.roleIndicator}></div>
               <div className={styles.roleText}>Заказчик</div>
+            </div>
+            <div className={styles.button} onClick={handleCreateOrder}>
+              <div className={styles.findOrderButtonText}>Создать заказ</div>
             </div>
             <div className={styles.button} onClick={handleFindOrder}>
               <div className={styles.findOrderButtonText}>Найти заказ</div>

@@ -14,7 +14,6 @@ const fetchList = async <T>(endpoint: string): Promise<T[]> => {
 		return parseArrayResponse<T>(data);
 	} catch (error: any) {
 		if (error.status === 404) {
-			console.log(`${endpoint} endpoint not found, returning empty array`);
 			return [];
 		}
 		throw error;

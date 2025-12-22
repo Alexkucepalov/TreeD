@@ -6,7 +6,7 @@ module.exports = {
 	devtool: false,
 	output: {
 		path: path.resolve(__dirname, '..', 'dist'),
-		publicPath: '/Stellar_burgers/',
+		publicPath: '/',
 	},
 	optimization: {
 		splitChunks: {

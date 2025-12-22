@@ -13,20 +13,30 @@ export const SHOP_API_BASE_URL = isProduction ? 'https://treed.pro/api' : '/api'
 // Базовый URL для аутентификации (без /api префикса)
 export const SHOP_AUTH_BASE_URL = isProduction ? 'https://treed.pro' : '';
 
-// Логирование для отладки
-if (typeof window !== 'undefined') {
-	console.log('API Base URL (with /api):', SHOP_API_BASE_URL);
-	console.log('Auth Base URL (without /api):', SHOP_AUTH_BASE_URL || '(empty - same origin)');
-	console.log('Hostname:', window.location.hostname, 'NODE_ENV:', typeof process !== 'undefined' ? process.env?.NODE_ENV : 'undefined');
-}
 
 /**
  * Получает значение cookie по имени
+ * Важно: document.cookie возвращает значения как есть, без автоматического декодирования
+ * Laravel Sanctum хранит токен в URL-encoded формате, поэтому нужно декодировать
  */
 const getCookie = (name: string): string | null => {
 	if (typeof document === 'undefined') return null;
 	const match = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/([.$?*|{}()\[\]\\\/\+^])/g, '\\$1') + '=([^;]*)'));
-	return match ? decodeURIComponent(match[1]) : null;
+	if (!match) return null;
+	const rawValue = match[1];
+	
+	// Проверяем, нужно ли декодировать (если содержит URL-encoded символы)
+	if (rawValue.includes('%')) {
+		try {
+			// Декодируем cookie значение, так как Laravel хранит токен в URL-encoded формате
+			return decodeURIComponent(rawValue);
+		} catch (e) {
+			// Если декодирование не удалось, возвращаем как есть
+			return rawValue;
+		}
+	}
+	// Если нет URL-encoded символов, возвращаем как есть
+	return rawValue;
 };
 
 /**
@@ -50,7 +60,15 @@ export const createHeaders = (options: {
 
 	const csrfToken = getCookie('XSRF-TOKEN');
 	if (csrfToken) {
-		headers['X-XSRF-TOKEN'] = decodeURIComponent(csrfToken);
+		// getCookie уже декодирует cookie из URL-encoded формата
+		// Laravel Sanctum хранит токен в cookie в URL-encoded формате
+		// Laravel ожидает токен в декодированном виде в заголовке X-XSRF-TOKEN
+		// getCookie уже декодирует, поэтому используем токен как есть
+		const tokenToSend = csrfToken;
+		
+		// Laravel Sanctum проверяет заголовок X-XSRF-TOKEN с декодированным токеном
+		// По документации Laravel Sanctum, токен должен быть декодирован в заголовке
+		headers['X-XSRF-TOKEN'] = tokenToSend;
 	}
 
 	return headers;
@@ -117,50 +135,55 @@ export const formatValidationErrors = (errorBody: any): string => {
  * Получает CSRF токен из мета-тега или cookie
  */
 export const ensureShopCsrfCookie = async (): Promise<boolean> => {
-	const getCookie = (name: string): string | null => {
+	// Используем ту же логику декодирования, что и в основной функции getCookie
+	const getCookieLocal = (name: string): string | null => {
 		if (typeof document === 'undefined') return null;
-		const match = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/([.$?*|{}()\[\]\\\/\+^])/g, '\\$1') + '=([^;]*)'));
-		return match ? decodeURIComponent(match[1]) : null;
+		const match = document.cookie.match(
+			new RegExp('(?:^|; )' + name.replace(/([.$?*|{}()\[\]\\\/\+^])/g, '\\$1') + '=([^;]*)')
+		);
+		if (!match) return null;
+		const rawValue = match[1];
+		
+		// Проверяем, нужно ли декодировать (если содержит URL-encoded символы)
+		if (rawValue.includes('%')) {
+		try {
+			return decodeURIComponent(rawValue);
+		} catch (e) {
+			return rawValue;
+		}
+		}
+		return rawValue;
 	};
 
 	try {
-		// Пытаемся получить токен из мета-тега
-		const metaToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
-		if (metaToken) {
-			return true;
-		}
-
-		// Проверяем, есть ли уже токен в куки
-		const existingToken = getCookie('XSRF-TOKEN');
-		if (existingToken) {
-			return true;
-		}
-
-		// Пробуем получить CSRF токен через Sanctum
+		// ВСЕГДА явно дергаем Sanctum, чтобы гарантированно получить свежий CSRF
 		const csrfPath = '/sanctum/csrf-cookie';
-		try {
-			const res = await fetch(`${SHOP_API_BASE_URL}${csrfPath}`, {
-				method: 'GET',
-				credentials: 'include',
-				headers: { 'Accept': 'application/json' },
-			});
+		const url = `${SHOP_AUTH_BASE_URL}${csrfPath}`;
+		
+		const res = await fetch(url, {
+			method: 'GET',
+			credentials: 'include',
+			headers: { 
+				Accept: 'application/json',
+				Origin: window.location.origin, // Явно указываем Origin для Laravel Sanctum
+			},
+		});
 
-			if (res.ok || res.status === 204) {
-				await new Promise(resolve => setTimeout(resolve, 200));
-				const xsrfToken = getCookie('XSRF-TOKEN');
-				if (xsrfToken) {
-					return true;
-				}
-			}
-		} catch (err: any) {
-			if (!err?.message?.includes('CORS') && !err?.message?.includes('Failed to fetch')) {
-				console.warn(`Failed to get CSRF from ${csrfPath}:`, err);
-			}
+		if (!res.ok && res.status !== 204) {
+			return false;
 		}
 
-		return false;
+		// Даём браузеру время записать куку
+		await new Promise((resolve) => setTimeout(resolve, 1000));
+		
+		const xsrfToken = getCookieLocal('XSRF-TOKEN');
+		
+		if (!xsrfToken) {
+			return false;
+		}
+
+		return true;
 	} catch (error) {
-		console.warn('Failed to get CSRF token:', error);
 		return false;
 	}
 };
@@ -192,8 +215,10 @@ export const makeRequest = async <T = any>(
 	if (ensureCsrf) {
 		try {
 			await ensureShopCsrfCookie();
+			// Даём дополнительное время для синхронизации cookie после получения CSRF
+			await new Promise((resolve) => setTimeout(resolve, 200));
 		} catch (error) {
-			console.warn('CSRF cookie request failed, continuing without it:', error);
+			// CSRF cookie request failed, continuing without it
 		}
 	}
 
@@ -233,7 +258,7 @@ export const makeRequest = async <T = any>(
 				responseData = JSON.parse(text);
 			}
 		} catch (e) {
-			console.warn('Failed to parse response:', e);
+			// Failed to parse response
 		}
 	}
 

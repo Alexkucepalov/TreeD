@@ -1,0 +1,42 @@
+.createOrderPage {
+  min-height: 100vh;
+  background: #f5f5f5;
+
+  :global {
+    .MuiStepper-root {
+      padding: 24px 0;
+    }
+
+    .MuiStepLabel-label {
+      font-size: 14px !important;
+      font-weight: 500;
+      
+      &.Mui-active {
+        font-weight: 600 !important;
+        color: #9163FF !important;
+      }
+      
+      &.Mui-completed {
+        color: #9163FF !important;
+      }
+    }
+
+    .MuiStepIcon-root {
+      width: 32px !important;
+      height: 32px !important;
+      
+      &.Mui-active {
+        color: #9163FF !important;
+      }
+      
+      &.Mui-completed {
+        color: #9163FF !important;
+      }
+    }
+
+    .MuiStepConnector-line {
+      border-top-width: 2px;
+    }
+  }
+}
+

@@ -19,17 +19,13 @@ export const registerShopAccount = async (payload: ShopRegisterPayload) => {
 export const loginShopAccount = async (email: string, password: string) => {
 	await ensureShopCsrfCookie();
 
-	const getCookie = (name: string): string | null => {
-		if (typeof document === 'undefined') return null;
-		const match = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/([.$?*|{}()\[\]\\\/\+^])/g, '\\$1') + '=([^;]*)'));
-		return match ? decodeURIComponent(match[1]) : null;
-	};
-
-	const xsrfFromCookie = getCookie('XSRF-TOKEN');
 	const headers = createHeaders({
 		includeContentType: true,
 		includeXRequestedWith: true,
 	});
+	
+	// Добавляем Origin для Laravel Sanctum
+	(headers as any)['Origin'] = window.location.origin;
 
 	const url = `${SHOP_AUTH_BASE_URL}/login`;
 	
@@ -51,26 +47,26 @@ export const loginShopAccount = async (email: string, password: string) => {
 	// Обработка ошибки 419 (CSRF токен)
 	if (response.status === 419) {
 		await ensureShopCsrfCookie();
-		const retryToken = getCookie('XSRF-TOKEN');
+		const retryHeaders = createHeaders({
+			includeContentType: true,
+			includeXRequestedWith: true,
+		});
 		
-		if (retryToken) {
-			(headers as any)['X-XSRF-TOKEN'] = retryToken;
-			const retryResponse = await fetch(url, {
-				method: 'POST',
-				headers,
-				credentials: 'include',
-				body: JSON.stringify({ email, password }),
-				redirect: 'manual',
-			});
+		const retryResponse = await fetch(url, {
+			method: 'POST',
+			headers: retryHeaders,
+			credentials: 'include',
+			body: JSON.stringify({ email, password }),
+			redirect: 'manual',
+		});
 
-			if (retryResponse.ok || retryResponse.status === 204) {
-				localStorage.setItem('accessToken', 'session-token');
-				return {
-					ok: true,
-					user: { id: 0, nickname: email, email: email, needsProfileFetch: true },
-					accessToken: 'session-token',
-				};
-			}
+		if (retryResponse.ok || retryResponse.status === 204) {
+			localStorage.setItem('accessToken', 'session-token');
+			return {
+				ok: true,
+				user: { id: 0, nickname: email, email: email, needsProfileFetch: true },
+				accessToken: 'session-token',
+			};
 		}
 
 		const errorText = await response.text().catch(() => '');
@@ -127,7 +123,7 @@ export const logoutUserGet = async () => {
 		});
 		return { ok: true };
 	} catch (error) {
-		console.warn('Logout request failed, but continuing with local cleanup:', error);
+		// Logout request failed, but continuing with local cleanup
 		return { ok: true };
 	}
 };
